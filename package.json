@@ -3,6 +3,9 @@
   "version": "0.4.0",
   "description": "Install node modules for atom-shell applications.",
   "main": "./lib/index.js",
+  "scripts": {
+    "prepublish": "gulp"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/probablycorey/atom-node-module-installer.git"
