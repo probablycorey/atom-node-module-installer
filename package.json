@@ -1,0 +1,30 @@
+{
+  "name": "atom-node-module-installer",
+  "version": "0.1.0",
+  "description": "Install node modules for atom-shell applications.",
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/probablycorey/atom-node-module-installer.git"
+  },
+  "keywords": [
+    "atom-shell"
+  ],
+  "author": "Corey Johnson",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/atom/grim/raw/master/LICENSE.md"
+    }
+  ],
+  "devDependencies": {
+    "del": "~0.1.3",
+    "gulp-coffee": "~2.2.0",
+    "gulp": "~3.8.8"
+  },
+  "dependencies": {
+    "es6-promise": "~1.0.0",
+    "underscore": "~1.7.0",
+    "npm": "~1.4.27"
+  }
+}
