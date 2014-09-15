@@ -3,7 +3,7 @@ os = require 'os'
 path = require 'path'
 
 _ = require 'underscore'
-Promise = require 'es6-promise'
+{Promise} = require 'es6-promise'
 
 CUSTOM_NODE_URL = 'https://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dist'
 
