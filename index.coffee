@@ -8,7 +8,7 @@ _ = require 'underscore'
 CUSTOM_NODE_URL = 'https://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dist'
 
 moduleInstaller =
-  install: (atomShellVersion, npmCachePath, appPath, {debug}={}) ->
+  install: (appPath, atomShellVersion, npmCachePath, {debug}={}) ->
     cwd = appPath
     env = _.extend {}, process.env,
       HOME: npmCachePath

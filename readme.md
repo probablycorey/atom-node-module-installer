@@ -14,17 +14,17 @@ npm install atom-node-module-installer
 
 ```javascript
 installNodeModules = require('atom-node-module-installer')
-installNodeModules(atomShellVersion, npmCachePath, appPath, [options])
+installNodeModules(appPath, atomShellVersion, npmCachePath, [options])
 ```
+
+**appPath**: A string containing the path where the atom-shell application is
+located.
 
 **atomShellVersion**: A string containing the atom-shell version to compile
 against (example: '0.16.2') versions can be found https://github.com/atom/atom-shell/releases
 
 **npmCachePath**: A string containing a path to store an atom-shell specific
 npm cache (example: './.atom-npm')
-
-**appPath**: A string containing the path where the atom-shell application is
-located.
 
 **options**: An optional object containing a `debug` key. Used if a debug
 version of a native module is needed.
