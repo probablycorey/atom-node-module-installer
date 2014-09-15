@@ -2,7 +2,7 @@
   "name": "atom-node-module-installer",
   "version": "0.3.0",
   "description": "Install node modules for atom-shell applications.",
-  "main": "./index.js",
+  "main": "./lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/probablycorey/atom-node-module-installer.git"

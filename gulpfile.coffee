@@ -3,10 +3,10 @@ del = require 'del'
 gulp = require 'gulp'
 
 gulp.task 'default', ['clean'], ->
-  gulp.src('./*.coffee')
+  gulp.src('./src/*.coffee')
     .pipe(coffee())
     .on 'error', console.error
-    .pipe(gulp.dest('.'))
+    .pipe(gulp.dest('./lib'))
 
 gulp.task 'clean', ->
   del '*.js'
