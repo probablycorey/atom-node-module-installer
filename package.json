@@ -1,6 +1,6 @@
 {
   "name": "atom-node-module-installer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Install node modules for atom-shell applications.",
   "main": "./index.js",
   "repository": {
