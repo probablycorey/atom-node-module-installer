@@ -10,3 +10,6 @@ gulp.task 'default', ['clean'], ->
 
 gulp.task 'clean', ->
   del '*.js'
+
+gulp.task 'watch', ->
+  gulp.watch '*.coffee', ['default']
