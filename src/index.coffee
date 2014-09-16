@@ -16,13 +16,13 @@ moduleInstaller =
       npm_config_target: atomShellVersion
       npm_config_arch: moduleInstaller.getNodeArch
 
-    new Promise (resolve, reject) =>
+    new Promise (resolve, reject) ->
       args = ['install']
       args.push '--debug' if debug
       npm = childProcess.spawn(moduleInstaller.getNpmPath(), args, {env, cwd})
-        .on 'error', (error) =>
+        .on 'error', (error) ->
           reject(moduleInstaller.createError(error.message, npm))
-        .on 'exit', (code, signal) =>
+        .on 'exit', (code, signal) ->
           if code == 0
             resolve()
           else
