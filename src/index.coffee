@@ -35,7 +35,7 @@ moduleInstaller =
       else process.arch
 
   getNpmPath: ->
-    path.join(__dirname, 'node_modules/.bin/npm')
+    path.join(__dirname, '../node_modules/.bin/npm')
 
   createError: (message, proc) ->
     message = "#{message}.\n"
