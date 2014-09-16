@@ -12,4 +12,4 @@ gulp.task 'clean', ->
   del 'lib'
 
 gulp.task 'watch', ->
-  gulp.watch '*.coffee', ['default']
+  gulp.watch './src/*.coffee', ['default']
