@@ -9,7 +9,7 @@ gulp.task 'default', ['clean'], ->
     .pipe(gulp.dest('./lib'))
 
 gulp.task 'clean', ->
-  del 'lib'
+  del 'lib/*'
 
 gulp.task 'watch', ->
   gulp.watch './src/*.coffee', ['default']
