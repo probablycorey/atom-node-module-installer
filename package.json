@@ -4,7 +4,8 @@
   "description": "Install node modules for atom-shell applications.",
   "main": "./lib/index.js",
   "scripts": {
-    "prepublish": "gulp"
+    "prepublish": "gulp",
+    "install": "node ./lib/download-node.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
   "dependencies": {
     "es6-promise": "^1.0.0",
     "npm": "^1.4.27",
+    "tar": "^1.0.1",
     "underscore": "^1.7.0"
   }
 }
