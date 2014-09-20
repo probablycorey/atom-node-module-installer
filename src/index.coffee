@@ -14,7 +14,7 @@ moduleInstaller =
       HOME: npmCachePath
       npm_config_disturl: CUSTOM_NODE_URL
       npm_config_target: atomShellVersion
-      npm_config_arch: moduleInstaller.getNodeArch
+      npm_config_arch: process.arch
 
     new Promise (resolve, reject) ->
       args = ['install']
@@ -28,11 +28,6 @@ moduleInstaller =
           else
             reject(moduleInstaller.createError("Failed to install node modules (code:#{code})", npm))
 
-  getNodeArch: ->
-    nodeArch = switch process.platform
-      when 'darwin' then 'x64'
-      when 'win32' then 'ia32'
-      else process.arch
 
   getNpmPath: ->
     path.join(__dirname, '../node_modules/.bin/npm')
