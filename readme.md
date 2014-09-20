@@ -17,6 +17,8 @@ installNodeModules = require('atom-node-module-installer')
 installNodeModules(appPath, atomShellVersion, npmCachePath, [options])
 ```
 
+Returns: an ES6 Promise.
+
 **appPath**: A string containing the path where the atom-shell application is
 located.
 
