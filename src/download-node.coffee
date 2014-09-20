@@ -4,6 +4,7 @@ http = require 'http'
 path = require 'path'
 zlib = require 'zlib'
 
+mkdirp = require 'mkdirp'
 tar = require 'tar'
 
 NODE_VERSION = '0.10.32'
@@ -12,6 +13,8 @@ NODE_PATH = path.join(__dirname, '../bin/node')
 # Because machines running atom-shell may not have node.js installed, this insures
 # that a node.js binary will be installed for npm.
 downloadNode = ->
+  mkdirp(path.dirname(NODE_PATH))
+
   writeStream = fs.createWriteStream(NODE_PATH)
     .on 'error', (error) ->
       exit 1, "Failed to write #{NODE_PATH}: #{error}"
