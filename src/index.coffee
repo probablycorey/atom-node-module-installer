@@ -17,7 +17,7 @@ moduleInstaller =
       npm_config_target: atomShellVersion
       npm_config_arch: process.arch
 
-    _.default(env, process.env)
+    _.defaults(env, process.env)
 
     new Promise (resolve, reject) ->
       args = ['install']
