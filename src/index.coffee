@@ -8,7 +8,7 @@ _ = require 'underscore'
 CUSTOM_NODE_URL = 'https://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dist'
 
 moduleInstaller =
-  install: (appPath, atomShellVersion, npmCachePath, {debug}={}) ->
+  install: (appPath, atomShellVersion, npmCachePath, {debug, verbose}={}) ->
     cwd = appPath
     env =
       HOME: npmCachePath
@@ -31,6 +31,11 @@ moduleInstaller =
           resolve()
         else
           reject(moduleInstaller.createError("Failed to install node modules (code:#{code})", npm))
+
+      if verbose
+        npm.stdout.pipe(process.stdout)
+        npm.stderr.pipe(process.stderr)
+
 
   getNpmPath: ->
     path.join(__dirname, '../node_modules/.bin/npm')
