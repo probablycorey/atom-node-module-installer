@@ -36,7 +36,6 @@ moduleInstaller =
         npm.stdout.pipe(process.stdout)
         npm.stderr.pipe(process.stderr)
 
-
   getNpmPath: ->
     path.join(__dirname, '../node_modules/.bin/npm')
 
