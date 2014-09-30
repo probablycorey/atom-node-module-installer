@@ -28,8 +28,10 @@ against (example: '0.16.2') versions can be found https://github.com/atom/atom-s
 **npmCachePath**: A string containing a path to store an atom-shell specific
 npm cache (example: './.atom-npm')
 
-**options**: An optional object containing a `debug` key. Used if a debug
-version of a native module is needed.
+**options**:
+
+  * `debug`: A Boolean that will build the debug version of node modules.
+  * `vebose`: A Boolean that will display npm's stdout and stderr
 
 ## Development
 
